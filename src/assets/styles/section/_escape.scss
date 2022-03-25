@@ -1,0 +1,98 @@
+.escape {
+    padding: 138px 0;
+    background-color: $light-color;
+
+    &__title {
+        margin-bottom: 14px;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+        &::before {
+            top: -38px;
+            left: 0;
+
+            @include a (tablet-xl) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__descr {
+        line-height: 24px;
+        max-width: 555px;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include a (tablet-xl) {
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 500px));
+        justify-content: space-between;
+        row-gap: 42px;
+        column-gap: 40px;
+
+        @include a (tablet-xl) {
+            grid-template-columns: minmax(300px, 500px);
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        // max-width: 500px;
+        // width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 52px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-1::before {
+            background: url(/src/assets/images/escape-item-1.png);
+        }
+
+        &-2::before {
+            background: url(/src/assets/images/escape-item-2.png);
+        }
+
+        &-3::before {
+            background: url(/src/assets/images/escape-item-3.png);
+        }
+
+        &-4::before {
+            background: url(/src/assets/images/escape-item-4.png);
+        }
+
+        &-5::before {
+            background: url(/src/assets/images/escape-item-5.png);
+        }
+
+        &-6::before {
+            background: url(/src/assets/images/escape-item-6.png);
+        }
+
+        &-7::before {
+            background: url(/src/assets/images/escape-item-7.png);
+        }
+
+        &-8::before {
+            background: url(/src/assets/images/escape-item-8.png);
+        }
+    }
+}

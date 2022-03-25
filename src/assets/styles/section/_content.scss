@@ -1,0 +1,28 @@
+.content {
+    padding-top: 140px;
+    background-color: $light-color;
+
+    &__title {
+        font-size: toRem(96);
+        line-height: 96px;
+        text-align: center;
+        padding-bottom: 140px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 42px;
+            height: 8px;
+            background-color: $accent-color;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__image {
+        background: url(/src/assets/images/content-image.jpg) no-repeat center/cover;
+        min-height: 600px;
+    }
+}

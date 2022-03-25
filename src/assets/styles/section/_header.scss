@@ -1,0 +1,40 @@
+.header {
+    padding: 20px 0;
+    background-color: $main-color;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(15);
+            color: $light-color;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__btn {
+        color: $main-color;
+        width: 117px;
+        line-height: 42px;
+        background-color: $light-color;
+        border-radius: 6px;
+    }
+}

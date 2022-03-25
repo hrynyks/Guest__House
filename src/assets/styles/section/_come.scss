@@ -1,0 +1,109 @@
+.come {
+    padding: 101px 0 126px;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 100px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    }
+
+    &__content {
+        padding-top: 38px;
+
+        @include a (tablet-xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 14px;
+
+        &::before {
+            top: -38px;
+
+            @include a (tablet-xl) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__descr {
+        line-height: 24px;
+        max-width: 514px;
+        width: 100%;
+
+        @include a (tablet-xl) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 37px;
+        column-gap: 59px;
+
+        @include a (mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        font-size: toRem(14);
+        line-height: 20px;
+        color: $dark-color;
+        padding-left: 52px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-1::before {
+            background: url(/src/assets/images/come-item-1.png);
+        }
+
+        &-2 {
+            max-width: 250px;
+            width: 100%;
+
+            &::before {
+                background: url(/src/assets/images/come-item-2.png);
+            }
+        }
+
+        &-3 {
+            max-width: 265px;
+            width: 100%;
+
+            &::before {
+                background: url(/src/assets/images/come-item-3.png);
+            }
+        }
+
+        &-4 {
+            max-width: 200px;
+            width: 100%;
+
+            &::before {
+                background: url(/src/assets/images/come-item-4.png);
+            }
+        }
+    }
+}

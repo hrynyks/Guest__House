@@ -1,0 +1,59 @@
+.book {
+    padding: 138px 0 100px;
+    background-color: $medium-color;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        line-height: 32px;
+        max-width: 533px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 14px;
+
+        &::before {
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__descr {
+        line-height: 24px;
+        max-width: 514px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__btn {
+        &-left {
+            color: $main-color;
+            border: 4px solid $main-color;
+            border-radius: 6px;
+            width: 116px;
+            line-height: 52px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        &-right {
+            color: $light-color;
+            border-radius: 6px;
+            width: 133px;
+            line-height: 52px;
+            text-align: center;
+            background-color: $main-color;
+        }
+    }
+}
